@@ -1,3 +1,6 @@
             InfoBC
 
-            Gestion du Personnem 
+            Gestion du Personnel
+            
+            
+            Si vous souhaitez reprendre le projet. Veuillez m'informer
