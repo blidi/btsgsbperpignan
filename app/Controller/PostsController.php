@@ -17,13 +17,8 @@ class PostsController extends AppController{
       function add() {
         if(!empty($this->request->data)){
             if($this->Post->save($this->request->data)){
-                this->Session->setFlash('votre ajout est réussie');
+                this->Session->setFlash('votre ajout est rï¿½ussie');
             }
         }
       }
-      function hello_world(){
-        
-        
-      }
-      
-    }
+}
