@@ -14,11 +14,13 @@ class PostsController extends AppController{
         
       }
       
-      function add() {
-        if(!empty($this->request->data)){
-            if($this->Post->save($this->request->data)){
-                this->Session->setFlash('votre ajout est r�ussie');
-            }
-        }
-      }
+          public function add() {
+        if ($this->request->is('post')) {
+        $this->Post->create();
+        if ($this->Post->save($this->request->data)) {
+            $this->Session->setFlash(__('Employer enregistre'));
+            return $this->redirect(array('action' => 'index'));
+         }
+        $this->Session->setFlash(__('Unable to add your post.'));
+    }
 }
